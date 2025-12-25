@@ -1,0 +1,10 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "piny.project_settings": {
+        "open-pages": [
+            "pinyfakepage.html"
+        ]
+    }
+}
