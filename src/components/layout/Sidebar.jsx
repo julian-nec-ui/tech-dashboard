@@ -22,13 +22,13 @@ const menuItems = [
     id: "dnd",
     icon: dragNdrop100,
     label: "Create, Drag & Drop Tasks",
-    expanded: false
+    expanded: false,
+    active: true
   },
   {
     id: "dashboard",
     icon: LayoutDashboard,
     label: "Dashboard",
-    active: true,
     badge: "New",
     expanded: false
   },
