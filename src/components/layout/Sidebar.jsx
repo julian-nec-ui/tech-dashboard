@@ -118,7 +118,7 @@ const menuItems = [
   {
     id: "dnd",
     icon: dragNdrop100,
-    label: "Drag & Drop",
+    label: "Create, Drag & Drop Tasks",
     expanded: false
   }
 ];
