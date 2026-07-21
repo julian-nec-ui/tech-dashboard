@@ -26,6 +26,12 @@ const menuItems = [
     active: true
   },
   {
+    id: "reports",
+    icon: FileText,
+    label: "Reports",
+    expanded: false
+  },
+  {
     id: "dashboard",
     icon: LayoutDashboard,
     label: "Dashboard",
@@ -95,12 +101,7 @@ const menuItems = [
     label: "Calendar",
     expanded: false
   },
-  {
-    id: "reports",
-    icon: FileText,
-    label: "Reports",
-    expanded: false
-  },
+  
   {
     id: "settings",
     icon: Settings,

@@ -7,7 +7,7 @@ import { NotionKanban } from './components/drag-n-drop/NotionKanban';
 function App() {
 
   const [sideBarCollapsed, setSideBarCollapsed] = React.useState(false);
-  const [currentPage, setCurrentPage] = React.useState("dashboard");
+  const [currentPage, setCurrentPage] = React.useState("dnd");
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50
