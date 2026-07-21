@@ -19,6 +19,12 @@ import adminImg from '..//..//assets//images//admin6-avatar.png';
 
 const menuItems = [
   {
+    id: "dnd",
+    icon: dragNdrop100,
+    label: "Create, Drag & Drop Tasks",
+    expanded: false
+  },
+  {
     id: "dashboard",
     icon: LayoutDashboard,
     label: "Dashboard",
@@ -115,12 +121,7 @@ const menuItems = [
   //   ],
   //   expanded: false
   // },
-  {
-    id: "dnd",
-    icon: dragNdrop100,
-    label: "Create, Drag & Drop Tasks",
-    expanded: false
-  }
+  
 ];
 
 function Sidebar({ collapsed, onToggle, currentPage, onPageChange }) {
