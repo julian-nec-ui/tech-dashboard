@@ -305,7 +305,7 @@ const DeleteBox = ({ title, headingColor, setCards }) => {
   };
 
   return (
-    <div className='w-65 shrink-0 flex-col ml-5 mb-3 justify-center'>
+    <div className='w-60 shrink-0 flex-col ml-5 mb-3 justify-center'>
       <h3 className={`font-medium ${headingColor}`}>{title}</h3>
       <div onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDragEnd} className={`relative group
             mt-4 grid h-56 w-56 shrink-0 place-content-center rounded
