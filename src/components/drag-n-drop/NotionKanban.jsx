@@ -34,6 +34,7 @@ const Board = () => {
         title="Backlog"
         column="backlog"
         headingColor="text-orange-500"
+        bgColor="bg-orange-500"
         cards={cards}
         setCards={setCards}
       />
@@ -41,6 +42,7 @@ const Board = () => {
         title="TODO"
         column="todo"
         headingColor="text-yellow-400"
+        bgColor="bg-yellow-400"
         cards={cards}
         setCards={setCards}
       />
@@ -48,6 +50,7 @@ const Board = () => {
         title="In Progress"
         column="doing"
         headingColor="text-cyan-400"
+        bgColor="bg-cyan-400"
         cards={cards}
         setCards={setCards}
       />
@@ -55,6 +58,7 @@ const Board = () => {
         title="Completed"
         column="done"
         headingColor="text-green-400"
+        bgColor="bg-green-400"
         cards={cards}
         setCards={setCards}
       />
@@ -63,7 +67,7 @@ const Board = () => {
   );
 };
 
-const Column = ({ title, headingColor, column, cards, setCards }) => {
+const Column = ({ title, headingColor, bgColor, column, cards, setCards }) => {
 
   const [active, setActive] = useState(false);
 
@@ -164,9 +168,9 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
 
   return (
     <div className='w-65 shrink-0'>
-      <div className='flex items-center justify-between mb-3'>
+      <div className='flex items-center justify-between mb-1'>
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
-        <span className='rounded text-sm text-neutral-400>'>
+        <span className={`px-2 ${bgColor} text-xm text-black rounded-full`}>
           {filteredCards.length}
         </span>
       </div>
@@ -305,10 +309,10 @@ const DeleteBox = ({ title, headingColor, setCards }) => {
   };
 
   return (
-    <div className='w-57 shrink-0 flex-col ml-5 mb-3 justify-center'>
+    <div className='w-57 shrink-0 flex-col ml-5 mt-1 justify-center'>
       <h3 className={`font-medium ${headingColor}`}>{title}</h3>
       <div onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDragEnd} className={`relative group
-            mt-4 grid h-56 w-56 shrink-0 place-content-center rounded
+            mt-3 grid h-56 w-56 shrink-0 place-content-center rounded
             border text-3xl hover:text-4xl transition-all hover:text-[#ff0000]
             hover:border-red-500 hover:shadow-amber-100/20 hover:shadow-xs
             data-tooltip-target="tooltip-default"
