@@ -362,12 +362,13 @@ const DEFAULT_CARDS = [
 
   // DOING
   { title: 'Refactor context providers to use Zustang', id: '10', column: 'doing' },
-  { title: 'Add logging to daily CRON', id: '11', column: 'doing' },
+  { title: 'Add OAuth to new microservices', id: '11', column: 'doing' },
   { title: 'Set up DD dashboards for Lambda listener', id: '12', column: 'doing' },
 
   // DONE
   { title: 'Set up DD dashboards for Lambda listener', id: '13', column: 'done' },
   { title: 'Add logging to daily CRON', id: '14', column: 'done' },
   { title: 'Realign priorities for new Kafka microservices', id: '15', column: 'done' },
+  { title: 'Rotate secrets in AWS', id: '16', column: 'done' },
 
 ];
