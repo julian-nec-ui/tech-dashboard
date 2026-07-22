@@ -163,7 +163,7 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
   const filteredCards = cards.filter((card) => card.column === column);
 
   return (
-    <div className='w-70 shrink-0'>
+    <div className='w-65 shrink-0'>
       <div className='flex items-center justify-between mb-3'>
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
         <span className='rounded text-sm text-neutral-400>'>
