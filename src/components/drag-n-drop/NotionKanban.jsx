@@ -33,14 +33,14 @@ const Board = () => {
       <Column
         title="Backlog"
         column="backlog"
-        headingColor="text-red-600"
+        headingColor="text-orange-500"
         cards={cards}
         setCards={setCards}
       />
       <Column
         title="TODO"
         column="todo"
-        headingColor="text-yellow-300"
+        headingColor="text-yellow-400"
         cards={cards}
         setCards={setCards}
       />
@@ -58,7 +58,7 @@ const Board = () => {
         cards={cards}
         setCards={setCards}
       />
-      <DeleteBox title="Deleted" headingColor="text-red-400" setCards={setCards} />
+      <DeleteBox title="Deleted" headingColor="text-red-500" setCards={setCards} />
     </div>
   );
 };
@@ -163,7 +163,7 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
   const filteredCards = cards.filter((card) => card.column === column);
 
   return (
-    <div className='w-56 shrink-0'>
+    <div className='w-70 shrink-0'>
       <div className='flex items-center justify-between mb-3'>
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
         <span className='rounded text-sm text-neutral-400>'>
@@ -305,38 +305,40 @@ const DeleteBox = ({ title, headingColor, setCards }) => {
   };
 
   return (
-    <div onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDragEnd} className={`relative group
-            mt-10 grid h-56 w-56 shrink-0 place-content-center rounded
+    <div className='w-70 shrink-0 flex-col ml-5 mb-3 justify-center'>
+      <h3 className={`font-medium ${headingColor}`}>{title}</h3>
+      <div onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDragEnd} className={`relative group
+            mt-4 grid h-56 w-56 shrink-0 place-content-center rounded
             border text-3xl hover:text-4xl transition-all hover:text-[#ff0000]
             hover:border-red-500 hover:shadow-amber-100/20 hover:shadow-xs
             data-tooltip-target="tooltip-default"
             ${active ?
-        'border-red-800 bg-red-800/20 text-red-500' :
-        'border-neutral-500 bg-neutral-500/20 text-neutral-500'}
+          'border-red-800 bg-red-800/20 text-red-500' :
+          'border-neutral-500 bg-neutral-500/20 text-neutral-500'}
         `}
-    >
-      {active ? <FiTrash className='animate-bounce' /> : !showSuccess ?
-        <div>
-          <div className="relative group">
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-full
+      >
+        {active ? <FiTrash className='animate-bounce' /> : !showSuccess ?
+          <div>
+            <div className="relative group">
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-full
                     mb-2 hidden group-hover:block w-max bg-[#ff0000]
                     text-white text-base rounded px-2 py-2">
-              Drag here to delete task
+                Drag here to delete task
 
-              <div className="absolute left-1/2 -translate-x-1/2 top-full
+                <div className="absolute left-1/2 -translate-x-1/2 top-full
                         h-0 w-0 border-l-8 border-r-8 border-t-6 border-l-transparent
                         border-r-transparent border-t-[#ff0000]" />
 
+              </div>
+
+              <FiTrash />
             </div>
-
-            <FiTrash />
+          </div> :
+          <div className="relative px-2 py-2 text-base text-white -translate-x-1/2 bg-green-600 rounded left-1/2">
+            Task deleted successfully!
           </div>
-        </div> :
-        <div className="relative px-2 py-2 text-base text-white -translate-x-1/2 bg-green-600 rounded left-1/2">
-          Task deleted successfully!
-        </div>
-      }
-
+        }
+      </div>
     </div>
   );
 };
